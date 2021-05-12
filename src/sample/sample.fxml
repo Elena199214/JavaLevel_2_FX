@@ -17,13 +17,13 @@
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0" />
           </expandableContent>
       </DialogPane>
-      <DialogPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="480.0">
+      <DialogPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="338.0" prefWidth="562.0">
           <header>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0">
                <children>
                   <Label layoutX="86.0" layoutY="16.0" prefHeight="153.0" prefWidth="304.0" />
-                  <TextArea prefHeight="200.0" prefWidth="200.0" />
-                  <TextArea prefHeight="200.0" prefWidth="471.0" style="-fx-background-color: #66CDAA;">
+                  <TextArea fx:id="mainTextArea" VBox.vgrow="ALWAYS" prefHeight="200.0" prefWidth="200.0" />
+                  <TextArea editable="false" layoutY="-50.0" prefHeight="250.0" prefWidth="544.0" style="-fx-background-color: #66CDAA;">
                      <cursor>
                         <Cursor fx:constant="DEFAULT" />
                      </cursor></TextArea>
@@ -34,7 +34,7 @@
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0">
                <children>
                   <TextField layoutX="14.0" layoutY="11.0" prefHeight="26.0" prefWidth="376.0" promptText="Введите сообщение" />
-                  <Button layoutX="397.0" layoutY="12.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="75.0" text="Отправить" />
+                  <Button layoutX="397.0" layoutY="12.0" mnemonicParsing="false" onAction="#sendOneClickAction" prefHeight="26.0" prefWidth="106.0" text="Отправить" />
                </children></AnchorPane>
           </content>
           <expandableContent>
