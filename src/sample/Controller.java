@@ -4,20 +4,26 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 
 
 public class Controller {
     @FXML
     TextArea mainTextArea;
+
+    @FXML
+    TextField textField;
+
+    @FXML
+    Button sendButton;
+
     public void sendOneClickAction(ActionEvent actionEvent) {
-        mainTextArea.appendText("1\n");
-
-        //Button thisButton = (Button)actionEvent.getSource(); // Вот так можно получить ссылку на кнопку,
-        // которая была нажата (например, есл и вы одно и то же действие повесили на десяток кнопок)
-    }
+        if (!(textField.getText().equals(""))) {
+            mainTextArea.appendText(textField.getText() + "\n");
+            textField.setText("");
 
 
-
+        }
 
 
 //
@@ -25,4 +31,5 @@ public class Controller {
 //    public void sendOneClickAction(ActionEvent actionEvent) {
 //        mainTextArea.appendText("1\n");
 //    }
+    }
 }
