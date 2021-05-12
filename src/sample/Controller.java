@@ -17,19 +17,34 @@ public class Controller {
     @FXML
     Button sendButton;
 
+
     public void sendOneClickAction(ActionEvent actionEvent) {
-        if (!(textField.getText().equals(""))) {
-            mainTextArea.appendText(textField.getText() + "\n");
-            textField.setText("");
+//        if (!(textField.getText().equals(""))) {
+//            mainTextArea.appendText(textField.getText() + "\n");
+//            textField.setText("");
+//
+//        }
+
+
+            if(!textField.getText().equals("")) {
+                mainTextArea.appendText(textField.getText() +"\n" + "\n");
+                textField.setText("");
+            }
+        }
+
+
+    public void seOneClickAction(ActionEvent actionEvent) {
+
+            if(!textField.getText().equals("")) {
+                mainTextArea.appendText(textField.getText() +"\n" + "\n");
+                textField.setText("");
+            }
+        }
 
 
         }
 
 
-//
-//
-//    public void sendOneClickAction(ActionEvent actionEvent) {
-//        mainTextArea.appendText("1\n");
-//    }
-    }
-}
+
+
+
